@@ -1,0 +1,122 @@
+.brand-logo-left {
+	margin-left: 1em;
+}
+
+.dark-background {
+	background-color: #EEF1EF
+}
+
+.page-footer.no-padding{
+	padding-top: none !important;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.progress {
+  height: 0.5em;
+}
+
+.margin {
+	margin-bottom: 0px !important;
+	margin-left: 3em !important;;
+	margin-right: 3em !important;;
+}
+
+.whole-line{
+	width: 100%;
+}
+
+.sec-center {
+    text-align: center;
+}
+
+.bg-light-red {
+	background-color: #FF6B6B;
+}
+
+.bg-green {
+	background-color: #7FD1B9;
+}
+
+.bg-blue {
+	background-color: white;
+}
+
+.bg-purple {
+	background-color: #818AA3;
+}
+
+.sub-text {
+  width: 100%;
+  margin: 20px 0;
+  font-size: 1.6rem;
+  /*font-family: Quando, "Times New Roman", serif;*/
+  text-align: center; 
+}
+
+.topic-text{
+  font-size: 1.4rem !important;
+  /*font-family: Quando, "Times New Roman", serif;*/
+}
+
+.name, .dev {
+  width: 100%;
+  margin: 20px 0;
+  font-size: 5.5rem;
+  line-height: 1.1;
+  /*font-family: Quando, "Times New Roman", serif;*/
+  letter-spacing: .08em;
+  text-align: center;
+  color: white;
+  text-shadow: #000 0.01em 0.01em 0, #000 0.02em 0.02em 0, #000 0.03em 0.03em 0, #000 0.04em 0.04em 0, #000 0.05em 0.05em 0;
+}
+
+.name {
+  color: darkseagreen;
+}
+
+.lcard {
+  display:flex;
+  align-items:center;
+}
+
+.projdesc {
+  margin-left: 0.4em !important;
+  margin-right: 0.4em !important;
+  text-align: justify;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .dev {
+    font-size: 2.5rem;
+  }
+  .name {
+    font-size: 3.5rem;
+  }
+  .sub-text {
+    font-size: 1.2rem;
+  }
+  
+  .lcard {
+    display: block;
+    align-items:center;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.5em;
+  }
+
+  .margin {
+    margin-left: 2em !important;;
+    margin-right: 2em !important;;
+  }
+
+}

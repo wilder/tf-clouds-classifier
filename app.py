@@ -1,8 +1,6 @@
 import os
 from classifier import classify_image
-from flask import Flask, request, redirect, url_for
-from flask import jsonify
-from flask_cors import CORS, cross_origin
+from flask import Flask, request, redirect, url_for, jsonify, render_template, jsonify
 from werkzeug import secure_filename
 
 UPLOAD_FOLDER = '.'
@@ -12,7 +10,7 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-cors = CORS(app, resources={r"/": {"origins": "*"}})
+#cors = CORS(app, resources={r"/": {"origins": "*"}})
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -33,7 +31,9 @@ def index():
         return jsonify(response)
 
 
+@app.route("/index", methods=['GET'])
+def index():
+    return render_template('index.html')
         
-
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8001, debug=True)
