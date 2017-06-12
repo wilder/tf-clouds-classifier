@@ -16,9 +16,9 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
-@app.route("/", methods=['POST'])
-@cross_origin()
-def index():
+#@cross_origin()
+@app.route("/predict", methods=['POST'])
+def predict():
     file = request.files['file']
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename).strip()
