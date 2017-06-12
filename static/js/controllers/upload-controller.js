@@ -14,7 +14,7 @@ var app = angular.module('materializeApp', ['ui.materialize']).controller('Uploa
     $scope.uploadFile = function() {
         var fd = new FormData()
         fd.append("file", $scope.file)
-        $http.post("http://localhost:8001/predict", fd, {
+        $http.post("https://glacial-reaches-30152.herokuapp.com/predict", fd, {
             transformRequest: angular.identity,
             headers: {'Content-Type': undefined}
         })
